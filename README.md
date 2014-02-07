@@ -1,12 +1,56 @@
-#一点点说明
+Scribble
+========
 
-这是[xiaowudesign.github.io](http://xiaowudesign.github.io)的源码，如果你看了[使用Github Pages建独立博客](http://beiyuu.com/github-pages/)，希望看下去哦：
+A jekyll theme. [demo](http://chloerei.com/scribble/2013/10/11/placeholder-post/)
+<br />
 
-* 马上动手，很赞
-* 感谢认可
-* 推荐阅读：[我为什么写博客？](http://beiyuu.com/why-blog/)
-* 想复用我的设计，没问题，标个出处就好啦
-* 转载也没问题，标个出处呗少年
-* 恩，认真的童鞋最可爱啦~
+![screenshot](http://scribble.muan.co/images/screenshot.png)
 
-###请删掉统计代码哦 /_layouts/default.html L38-41
+This theme is fork from https://github.com/muan/scribble .
+
+---
+
+### Get started
+
+1. [Fork the repository](https://github.com/chloerei/scribble/fork).
+2. Clone the repository to your computer.<br /> `git clone https://github.com/username/scribble` .
+3. `bundle install` .
+4. Run serve and watch assets change using `rake`, go to http://localhost:4000 for your site.
+
+---
+
+### Replace theme for exists site
+
+1. Remove all theme files in your project, and commit.
+2. `git remote add scribble https://github.com/username/scribble` .
+3. `git pull scribble master` and fix conflict.
+
+---
+
+### Make it yours
+
+1. I have extract most user specific information to `_config.yml`, you should be able to set up almost everything from it.
+2. Change about.md for blog intro.
+3. For domain settings, see [the guide from GitHub](https://help.github.com/articles/setting-up-a-custom-domain-with-pages).
+
+---
+
+### Post options
+
+When writing a post, there are 1 option you can add to the header.
+
+1. `disqus: false`<br />
+   Close Disqus for this post.
+
+---
+
+### Page options
+
+When writing a page, there are 3 options you can add to the header.
+
+1. `disqus: false`<br />
+   Close Disqus for this post.
+2. `prev_page: /path/to/prev_page`<br />
+   Set the prev page path for pagination.
+3. `next_page: /path/to/next_page`<br />
+   Set the next page path for pagination.
