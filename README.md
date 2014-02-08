@@ -1,7 +1,7 @@
 Scribble
 ========
 
-A jekyll theme. [demo](http://chloerei.com/scribble/2013/10/11/placeholder-post/)
+A jekyll theme. [demo](http://xiaowudesign.github.io)
 <br />
 
 ![screenshot](http://scribble.muan.co/images/screenshot.png)
@@ -12,7 +12,7 @@ This theme is fork from https://github.com/muan/scribble .
 
 ### Get started
 
-1. [Fork the repository](https://github.com/chloerei/scribble/fork).
+1. [Fork the repository](https://github.com/xiaowudesign/xiaowudesign.github.io/fork).
 2. Clone the repository to your computer.<br /> `git clone https://github.com/username/scribble` .
 3. `bundle install` .
 4. Run serve and watch assets change using `rake`, go to http://localhost:4000 for your site.
