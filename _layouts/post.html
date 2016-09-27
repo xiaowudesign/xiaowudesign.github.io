@@ -1,28 +1,17 @@
-<html>
-  <head>
-    <title>{{ page.title }} - {{ site.title }}</title>
-    {% include head.html %}
-  </head>
-  <body>
-    {% include header.html %}
-    <div id='container'>
-      {% include links.html %}
-      {% include post_pagination.html %}
-      <div class="content">
-        <section class='post'>
-          <h1>
-            <div class='date'>{{ page.date | date_to_string }}</div>
-            {{ page.title }}
-          </h1>
-          {{ content }}
-          {% include signoff.html %}
-        </section>
-      </div>
-      {% if site.disqus_shortname and page.disqus != false %}
-        {% include disqus.html %}
-      {% endif %}
-      {% include links.html %}
-    </div>
-    {% include footer.html %}
-  </body>
-</html>
+---
+layout: default
+---
+
+<body class="body-post">
+  <div class="post-wrapper">
+    <h1 class="post-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
+    <p class="post-date">{{ page.date|date:"%Y-%m-%d" }}</p>
+    {{ content }}
+    {% include disqus.html %}
+  </div>
+
+  {% include about.html %}
+
+  <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="/js/post.js" type="text/javascript"></script>
+</body>

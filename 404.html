@@ -1,22 +1,17 @@
 ---
-layout: none
-permalink: 404.html
+layout: default
+title: 出错啦！
 ---
-<html>
-  <head>
-    <title>Scribble</title>
-    <link href='{{ site.baseurl }}/images/fav.png' rel='shortcut icon'>
-    <link href='{{ site.baseurl }}/stylesheets/style.css' rel='stylesheet' type='text/css' />
-    <link href='{{ site.baseurl }}/stylesheets/responsive.css' rel='stylesheet' type='text/css' />
-    <meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
-    <meta content='text/html; charset=utf-8' http-equiv='content-type' />
-  </head>
-  <body>
-    <div style="margin-top: 50px; width: 100%; text-align: center;">
-      <img src="{{ site.baseurl }}/images/404.png" alt="not found" width="160" />
-    <p>
-      <a href="/" class="muted" target="_top">Back to {{ site.title }}</a>
-    </p>
-    </div>
-  </body>
-</html>
+
+<body>
+  <div class="post-wrapper">
+    <h1 class="post-title" style="margin-bottom: 50px;"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
+    <ul>
+      {% for post in site.categories.blog %}
+      <li>
+        <a href="{{ post.url }}" class="title">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
