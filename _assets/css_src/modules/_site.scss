@@ -1,0 +1,36 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Base Site
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: auto;
+  overflow: auto;
+}
+
+body {
+  @extend %font-family-alpha;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  background-color: #ffffff;
+
+  &.page--work {
+    overflow-x: hidden;
+  }
+}
+
+::selection {
+  background: $color-alpha;
+  color: $color-white;
+}
+
+.global-site {
+  position: relative;
+}

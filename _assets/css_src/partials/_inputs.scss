@@ -1,0 +1,56 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Inputs
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.btn {
+    @extend %font-family-beta;
+    background: $color-white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #ccc;
+    display: inline-block;
+    line-height: .9em;
+    margin: rem-calc(10px) 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+    width: auto;
+
+    &:hover {
+        background: $color-flare-primary;
+        border-color: darken($color-flare-primary, 5%);
+        color: #fff;
+    }
+
+}
+
+.btn--small {
+    font-size: rem-calc(11px);
+    padding: 10px 20px;
+
+}
+
+.btn--medium {
+    font-size: rem-calc(15px);
+    padding: 10px 30px;
+}
+
+.btn--massive {
+    background: $color-black;
+    border-color: darken($color-black, 15%);
+    color: $color-white;
+    font-size: rem-calc(14px);
+    padding: 15px 50px;
+    text-transform: none;
+}
+
+.btn--dark {
+    background: $color-black;
+    border: 1px solid #555;
+    color: #777;
+
+    &:hover {
+        border-color: #333;
+    }
+}

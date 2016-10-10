@@ -1,0 +1,193 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Typography
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: $color-black;
+  margin: 0;
+  padding: 0;
+}
+
+%font-color-light {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: #fff;
+  }
+}
+
+
+
+%text-align-center {
+  text-align: left;
+
+  @media #{$medium-up} {
+    text-align: center;
+  }
+}
+
+
+p,
+table {
+  @extend %font-family-copy;
+}
+
+//
+// Titles and Subs
+//
+
+.page__title {
+  font-size: rem-calc(24px);
+  font-weight: 400;
+  line-height: 1.2em;
+  color: $color-flare-primary;
+
+  @media #{$medium-up} {
+    font-size: rem-calc(28px);
+    text-align: center;
+  }
+}
+
+
+.page__meta {
+  @extend %font-family-beta;
+  color: $color-flare-secondary;
+  display: block;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: rem-calc(14px);
+  line-height: 1.2em;
+  margin: rem-calc(10px) 0;
+
+  @media #{$medium-up} {
+    text-align: center;
+  }
+
+  .work__header & {
+    color: rgba(255, 255, 255, .7);
+  }
+}
+
+.stream-title {
+  @extend %font-family-beta;
+  font-size: 14px;
+  font-weight: normal;
+  color: #c6ced8;
+  display: inline-block;
+  transform: matrix(1, 0, 0, 1, 0, 20);
+
+  @media #{$large-up} {
+    transform: matrix(1, 0, 0, 1, -140, 180) rotate(-90deg);
+  }
+}
+
+
+//
+// Gutenberg Inline
+//
+
+.gutenberg {
+  @import 'type-gutenberg';
+}
+
+//
+// Misc Type
+//
+
+.faded {
+  color: lighten(#161920, 45%) !important;
+  font-size: rem-calc(16px);
+}
+
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+}
+
+a {
+  color: $color-flare-primary;
+}
+
+.social-link {
+  $social-colors: (
+    "twitter": #55acee,
+    "instagram": #3f729b,
+    "codepen": #222222,
+    "github": #4183c4,
+    "dribbble": #ea4c89
+  );
+
+  @each $brand, $brandColor in $social-colors {
+    &.#{$brand} {
+      color: $brandColor !important;
+    }
+  }
+}
+
+//
+// Text Glitch Effect - 404
+// Shamelessly stolen from css-tricks.com/glitch-effect-text-images-svg/
+//
+
+.glitch {
+  color: $color-black;
+  position: relative;
+
+  &:after,
+  &:before {
+    width: 100%;
+    text-align: center;
+    background: $color-white;
+    clip: rect(0, 900px, 0, 0);
+    color: $color-black;
+    content: attr(data-glitch-text);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+  }
+
+  &:before {
+    animation: glitch-before 3s infinite linear alternate-reverse;
+    left: -2px;
+    text-shadow: 1px 0 #00f;
+  }
+
+  &:after {
+    animation: glitch-after 2s infinite linear alternate-reverse;
+    left: 2px;
+    text-shadow: -1px 0 #f00;
+  }
+}
+
+@keyframes glitch-before {
+  $steps:20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))}{
+        clip:rect(random(100)+px, 9999px, random(100)+px, 0);
+    }
+  }
+}
+
+@keyframes glitch-after {
+  $steps:20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
